@@ -1,0 +1,38 @@
+checklist
+
+PC-01
+
+CONFIGURAR IP (192.168.0.10)
+CONFIGURAR MASCARA (255.255.255.0)
+CONFIGURAR GATEWAY (192.168.0.1)
+
+PC-02
+
+CONFIGURAR IP (172.16.0.10)
+CONFIGURAR MASCARA (255.255.0.0)
+CONFIGURAR GATEWAY (172.16.0.1)
+
+SW-01 SW-02
+
+Hostname (NOME DO SWITCH) 
+BANNER (ACESSO APENAS PARA PESSOAS AUTORIZADAS! )
+SENHA ENABLE (enable secret lucascaique*enable)
+SENHA CONSOLE  (line console 0 + password lucascaique + login)
+INTERFACE VLAN1 (IP ADDRESS 192.168.0.254 255.255.255.0 + NO SHUTDOWN)
+CONFIGURAR SSH (dominío 1rede.local) (1024 bits)
+CONFIGURAR GATEWAY (IP  DEFAULT--GATEWAY 192.168.0.1)
+CRIAR USERNAME (username lucascaique privilege 15 secret 123)
+ATIVAR LOGIN USERNAME (login local no console e vty)
+CRIPTOGRAFAR TODAS A SENHAS (service password-encryption)
+
+router
+configurar interface g0/0 (192.168.0.1 255.255..255.0)
+senha da enable (lucascaique*enable)
+senha console (lucascaique*console)
+configurar banner (ACESSO APENAS PARA PESSOAS AUTORIZADAS!)
+configurar interface g0/1 (172.16.0.1 255.255.0.0)
+configurar SSH (1rede.local) (1024)
+configurar username (username lucascaique privilege 15 secret 123)
+criptografar todas as senhas (service password-encryption)
+criar username ( username lucascaique privilege 15 secret 123)
+ativar username (console e vty)
